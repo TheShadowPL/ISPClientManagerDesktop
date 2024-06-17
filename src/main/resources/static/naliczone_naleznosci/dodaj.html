@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj naliczoną należność</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Strona startowa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista.html">Lista Należności</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dodaj.html">Dodaj Należność</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-4">
+    <h2>Dodaj naliczoną należność</h2>
+    <form id="dodajNaliczonaNaleznoscForm">
+        <div class="mb-3">
+            <label for="termin-platnosci" class="form-label">Termin płatności</label>
+            <input type="date" class="form-control" id="termin-platnosci" required>
+        </div>
+        <div class="mb-3">
+            <label for="kwota-do-zaplaty" class="form-label">Kwota do zapłaty</label>
+            <input type="number" class="form-control" id="kwota-do-zaplaty" required>
+        </div>
+        <div class="mb-3">
+            <label for="typ-instalacji" class="form-label">Typ Instalacji</label>
+            <input type="text" class="form-control" id="typ-instalacji" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Dodaj naliczoną należność</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/naliczone_naleznosci.js"></script>
+
+<script>
+    document.getElementById('dodajNaliczonaNaleznoscForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const terminPlatnosci = document.getElementById('termin-platnosci').value;
+        const kwotaDoZaplaty = document.getElementById('kwota-do-zaplaty').value;
+        const instalacja = document.getElementById('typ-instalacji').value;
+
+        addNaliczoneNaleznosci(terminPlatnosci, kwotaDoZaplaty,instalacja);
+    });
+</script>
+
+</body>
+</html>

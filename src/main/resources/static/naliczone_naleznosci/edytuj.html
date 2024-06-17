@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edytuj naliczoną należność</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2>Edytuj naliczoną należność</h2>
+    <form>
+        <div class="mb-3">
+            <label for="termin-platnosci" class="form-label">Termin płatności</label>
+            <input type="date" class="form-control" id="termin-platnosci" required>
+        </div>
+        <div class="mb-3">
+            <label for="kwota-do-zaplaty" class="form-label">Kwota do zapłaty</label>
+            <input type="number" class="form-control" id="kwota-do-zaplaty" required>
+        </div>
+        <div class="mb-3">
+            <label for="typ-instalacji" class="form-label">Typ Instalacji</label>
+            <input type="text" class="form-control" id="typ-instalacji" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/naliczone_naleznosci.js"></script>
+<script src="js/edytuj.js"></script>
+
+</body>
+</html>
